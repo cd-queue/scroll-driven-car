@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import carImage from "./assets/obcar.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -310,7 +311,7 @@ function App() {
             >
 
               <img
-                src="/car.png"
+                src={carImage}
                 alt="Car"
 
                 className="
