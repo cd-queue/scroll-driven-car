@@ -223,8 +223,8 @@ function App() {
 
                 whitespace-nowrap
 
-                text-[70px]
-                md:text-[120px]
+                text-[48px]
+                sm:text-[80px]
                 lg:text-[150px]
 
                 font-bold
@@ -317,7 +317,7 @@ function App() {
                 className="
                   block
 
-                  w-[450px]
+                  w-[min(450px,35vw)]
                   h-auto
                 "
               />
@@ -328,19 +328,29 @@ function App() {
 
 
           <div
-            ref={box1Ref}
             className="
               absolute
-
-              top-[10%]
-              right-[30%]
-
+              top-[8%]
+              right-[6%]
+              bottom-[8%]
               z-40
-            rounded-[10px]
-             bg-[#def54f]
-             text-[#111]
-             text-[20px]
-            p-[30px]
+              grid
+              w-[48%]
+              grid-cols-2
+              grid-rows-2
+              items-start
+              gap-6
+            "
+          >
+          <div
+            ref={box1Ref}
+            className="
+              h-fit
+              rounded-[10px]
+              bg-[#def54f]
+              text-[clamp(14px,1.4vw,20px)]
+              text-[#111]
+              p-[30px]
             "
           >
             <div className="mt-3 text-6xl font-bold">
@@ -356,18 +366,12 @@ function App() {
           <div
             ref={box2Ref}
             className="
-              absolute
-
-              top-[10%]
-              right-[10%]
-
-              z-40
-
+              h-fit
               rounded-[10px]
-             bg-[#333]
-             text-[#fff]
-             text-[20px]
-            p-[30px]
+              bg-[#333]
+              text-[clamp(14px,1.4vw,20px)]
+              text-[#fff]
+              p-[30px]
             "
           >
 
@@ -385,18 +389,13 @@ function App() {
           <div
             ref={box3Ref}
             className="
-              absolute
-
-              top-[70%]
-              right-[33%]
-
-              z-40
-
-            rounded-[10px]
-             bg-[#6ac9ff]
-             text-[#111]
-             text-[20px]
-            p-[30px]
+              h-fit
+              self-end
+              rounded-[10px]
+              bg-[#6ac9ff]
+              text-[clamp(14px,1.4vw,20px)]
+              text-[#111]
+              p-[30px]
             "
           >
 
@@ -415,19 +414,13 @@ function App() {
           <div
             ref={box4Ref}
             className="
-              absolute
-
-              top-[70%]
-              right-[10%]
-
-              z-40
-
-             rounded-[10px]
-             bg-[#fa7328]
-             text-[#111]
-             text-[20px]
-            p-[30px]
-             
+              h-fit
+              self-end
+              rounded-[10px]
+              bg-[#fa7328]
+              text-[clamp(14px,1.4vw,20px)]
+              text-[#111]
+              p-[30px]
             "
           >
 
@@ -438,6 +431,8 @@ function App() {
             <p className="mt-3 leading-6">
               Decreased in customer phone calls
             </p>
+
+          </div>
 
           </div>
 
